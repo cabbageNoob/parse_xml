@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PubInfos>
+	<PubInfo>
+		<MessageHead ProtocolType="" MsgType="2" MsgID="" OperateType="" SendType="" Priority="" DayTime="" />
+		<PubInfoSendType>pubinfosendtype</PubInfoSendType>
+		<PubInfoSerialNum>pubinfoserialnum</PubInfoSerialNum>
+		<PubInfoCaseName>pubinfocasename</PubInfoCaseName>
+		<PubInfoCaseJudgeName>pubinfocasejudgename</PubInfoCaseJudgeName>
+		<PublicSentimentInfoNum>PublicSentimentInfoNum</PublicSentimentInfoNum>
+		<PublicSentimentInfoArea>
+			<PubInfoID>pubinfoiD</PubInfoID>
+			<PubInfoTitile>pubinfotitile</PubInfoTitile>
+			<PubInfoContent>pubinfocontent</PubInfoContent>
+			<PubInfoTime>pubinfotime</PubInfoTime>
+			<PubInfoSrcType>pubinfosrctype</PubInfoSrcType>
+			<PubInfoSrcWebsiteName>pubinfosrcwebsitename</PubInfoSrcWebsiteName>
+			<PubInfoSrcNetizenName>pubinfosrcnetizenname</PubInfoSrcNetizenName>
+			<PubInfoForwardNum>pubinfoforwardnum</PubInfoForwardNum>
+			<PubInfoSrcWebsiteLink>pubinfosrcwebsitelink</PubInfoSrcWebsiteLink>
+			<PubInfoFileNum>pubinfofilenum</PubInfoFileNum>
+			<PubInfoFileArea>
+				<PubInfoFileID>PubInfoFileID</PubInfoFileID>
+				<PubInfoFileName>PubInfoFileName</PubInfoFileName>
+				<PubInfoFileType>PubInfoFileType</PubInfoFileType>
+				<PubInfoFileLength>PubInfoFileLength</PubInfoFileLength>
+				<PubInfoFileContent>PubInfoFileContent</PubInfoFileContent>
+			</PubInfoFileArea>
+			<PubInfoCorType>pubinfocortype</PubInfoCorType>
+			<PubInfoDepartmentNum>pubinfodepartmentnum</PubInfoDepartmentNum>
+			<PubInfoDepartmentWorkArea>
+				<PubInfoDepartmentType>PubInfoDepartmentType</PubInfoDepartmentType>
+				<PubInfoDepartmentLevel>PubInfoDepartmentLevel</PubInfoDepartmentLevel>
+				<PubInfoDepProvince>PubInfoDepProvince</PubInfoDepProvince>
+				<PubInfoDepCity>PubInfoDepCity</PubInfoDepCity>
+				<PubInfoDepartmentArea>PubInfoDepartmentArea</PubInfoDepartmentArea>
+				<PubInfoDepartmentName>PubInfoDepartmentName</PubInfoDepartmentName>
+			</PubInfoDepartmentWorkArea>
+			<PubInfoDepartmentWork>
+				<PubInfoDepartmentWorkType>PubInfoDepartmentType</PubInfoDepartmentWorkType>
+				<PubInfoDepartmentWorkContent>PubInfoDepartmentLevel</PubInfoDepartmentWorkContent>
+			</PubInfoDepartmentWork>
+		</PublicSentimentInfoArea>
+	</PubInfo>
+</PubInfos>
+	
