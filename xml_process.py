@@ -5,7 +5,7 @@
 @Author: 
 @Date: 2019-12-27 11:11:48
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-30 19:30:08
+@LastEditTime : 2019-12-30 19:37:45
 '''
 import os,re
 import xml.etree.ElementTree as ET
@@ -73,6 +73,7 @@ def get_attrib_value(root,MsgType,xml_path):
         PublicSentimentInfoNum.text = PublicSentimentInfoNum_text
 
         xml_str = ET.tostring(PubInfo, encoding='UTF-8', short_empty_elements=False)
+        xml_str = str(xml_str, 'utf8')
         return xml_str
             
     elif (MsgType == '3'):
@@ -86,11 +87,13 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
     elif (MsgType == '12'):
         xml_str = gen_xml.parse_xml_8(xml_path)
+        xml_str = str(xml_str, 'utf8')
         return xml_str
     elif (MsgType == '13'):
         pass
     elif (MsgType == '14'):
-        xml_str=gen_xml.parse_xml_10(xml_path)
+        xml_str = gen_xml.parse_xml_10(xml_path)
+        xml_str = str(xml_str, 'utf8')
         return xml_str
     elif (MsgType == '15'):
         pass
@@ -142,8 +145,8 @@ def prettyXml(element, indent, newline, level=0):
 
 
 def main():
-    # xml_str = parse_xml('./xml_example/4.1.9.xml')
-    xml_str=parse_xml('./xml_jiaoe/get_4.xml')
+    xml_str = parse_xml('./xml_example/4.1.9.xml')
+    # xml_str=parse_xml('./xml_jiaoe/get_4.xml')
     # xml_str = parse_xml('./static/xml/origin.xml')
     # root = ET.fromstring(xml_str)
     # prettyXml(root, '\t', '\n')

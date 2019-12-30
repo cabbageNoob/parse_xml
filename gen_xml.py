@@ -4,7 +4,7 @@
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-30 13:43:09
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-30 19:21:11
+@LastEditTime : 2019-12-30 19:38:28
 '''
 import os
 import xml.etree.ElementTree as ET
@@ -125,7 +125,6 @@ def parse_xml_10(xml_path):
     
         
         
-
 
     
     
