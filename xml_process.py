@@ -5,7 +5,7 @@
 @Author: 
 @Date: 2019-12-27 11:11:48
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-30 19:37:45
+@LastEditTime : 2019-12-30 21:31:34
 '''
 import os,re
 import xml.etree.ElementTree as ET
@@ -46,7 +46,7 @@ def parse_xml(xml_path):
     root = ET.fromstring(xml_str)
     prettyXml(root, '\t', '\n')
     tree = ET.ElementTree(root)
-    file_name = xml_path.split('/')[-1]
+    file_name = xml_path.split('\\')[-1]
     file_path = os.path.join(app.config['GENERATE_XML'], 'gen_'+file_name)
     tree.write(file_path,encoding='UTF-8',  xml_declaration=True)
     ET.dump(root)

@@ -3,8 +3,8 @@
 @version: 
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-30 18:40:49
-@LastEditors: cjh (492795090@qq.com)
-@LastEditTime: 2019-12-30 19:27:42
+@LastEditors  : cjh (492795090@qq.com)
+@LastEditTime : 2019-12-30 19:42:45
 '''
 
 # -*- coding: utf-8 -*-
@@ -92,12 +92,12 @@ def create_xml(input_xml):
     xml_str=dom.toxml()
     return xml_str
     
-    try:
-        with open('./xml_jiaoe/xml/4.1.4司法案件舆情精准搜索服务订阅结果.xml', 'w', encoding='UTF-8') as fh:
-            dom.writexml(fh, indent='', addindent='\t', newl='\n', encoding='UTF-8')
-            print('写司法案件舆情精准搜索服务订阅结果完毕!')
-    except Exception as err:
-        print('错误信息：{0}'.format(err))
+    # try:
+    #     with open('./xml_jiaoe/xml/4.1.4司法案件舆情精准搜索服务订阅结果.xml', 'w', encoding='UTF-8') as fh:
+    #         dom.writexml(fh, indent='', addindent='\t', newl='\n', encoding='UTF-8')
+    #         print('写司法案件舆情精准搜索服务订阅结果完毕!')
+    # except Exception as err:
+    #     print('错误信息：{0}'.format(err))
 
 if __name__=='__main__':
     create_xml('./xml_jiaoe/get_4.xml')
