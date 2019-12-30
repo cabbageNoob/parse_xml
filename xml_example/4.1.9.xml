@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Message>
+    <MessageHead DayTime="2019/12/30 10/06/51" MsgID="0-65535" MsgType="14" OperateType="" Priority="" ProtocolType="5" SendType="" />
+    <MessageContent>
+        <PubInfoSearchType>1</PubInfoSearchType>
+        <TimeSearchFlag>1</TimeSearchFlag>
+        <KeySearchFlag>1</KeySearchFlag>
+        <RegionSearchFlag>1</RegionSearchFlag>
+        <DepartmentSearchFlag>1</DepartmentSearchFlag>
+        <WorkSearchFlag>1</WorkSearchFlag>
+        <PubInfoStartTime></PubInfoStartTime>
+        <PubInfoEndTime></PubInfoEndTime>
+        <PubInfoKeywordNum>1</PubInfoKeywordNum>
+        <PubInfoKeywordArea>
+            <Keayword></Keayword>
+        </PubInfoKeywordArea>
+        <PubInfoTopicSourceRegion></PubInfoTopicSourceRegion>
+        <PubInfoDepartmentLevel>1</PubInfoDepartmentLevel>
+        <PubInfoDepProvince>1</PubInfoDepProvince>
+        <PubInfoDepCity></PubInfoDepCity>
+        <PubInfoTopicJusticeType>1</PubInfoTopicJusticeType>
+    </MessageContent>
+</Message>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+	<MessageHead DayTime="2019/12/30 10/06/51" MsgID="0-65535" MsgType="3" OperateType="" Priority="" ProtocolType="5" SendType=""/>
+	<MessageContent>
+		<PubInfoSerialNum>5</PubInfoSerialNum>
+		<PubInfoKeywordNum>1</PubInfoKeywordNum>
+		<PubInfoKeywordArea>
+			<Keayword>杀人</Keayword>
+		</PubInfoKeywordArea>
+		<PubInfoCaseName>4·17大连大谭杀人案</PubInfoCaseName>
+		<PubInfoCaseJudgeName>5</PubInfoCaseJudgeName>
+	</MessageContent>
+</Message>

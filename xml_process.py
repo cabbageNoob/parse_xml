@@ -5,13 +5,14 @@
 @Author: 
 @Date: 2019-12-27 11:11:48
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-29 22:05:42
+@LastEditTime : 2019-12-30 19:30:08
 '''
-import os
+import os,re
 import xml.etree.ElementTree as ET
 from flask import Flask, render_template, redirect, request
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
+import gen_xml
 
 GENERATE_XML='D:/uploads/generate_xml'
 if not os.path.exists(GENERATE_XML):
@@ -40,20 +41,20 @@ def parse_xml(xml_path):
     root = tree.getroot()
 
     MsgType = list(root.iter('MessageHead'))[0].attrib['MsgType']
-    xml_str = get_attrib_value(root, MsgType)
+    xml_str = get_attrib_value(root, MsgType, xml_path)
+    xml_str = re.sub(u"[\x00-\x08\x0b-\x0c\x0e-\x1f]+", u"", xml_str)
     root = ET.fromstring(xml_str)
     prettyXml(root, '\t', '\n')
     tree = ET.ElementTree(root)
-    file_name = xml_path.split('\\')[-1]
+    file_name = xml_path.split('/')[-1]
     file_path = os.path.join(app.config['GENERATE_XML'], 'gen_'+file_name)
     tree.write(file_path,encoding='UTF-8',  xml_declaration=True)
     ET.dump(root)
     xml_str=ET.tostring(root, encoding='UTF-8', short_empty_elements=False)
-    print(xml_str)
     return xml_str
 
 
-def get_attrib_value(root,MsgType):
+def get_attrib_value(root,MsgType,xml_path):
     '''
     @Descripttion: 根据MsgType获取xml信息
     @param MsgType
@@ -64,29 +65,19 @@ def get_attrib_value(root,MsgType):
     elif (MsgType == '2'):
         PublicSentimentInfoNum_text = list(
             root.iter('PublicSentimentInfoNum'))[0].text
-        # PlatCfgRslt_text = list(
-        #     root.iter('PlatCfgRslt'))[0].text
-        # PlatInfoArea_text = list(
-        #     root.iter('PlatInfoArea'))[0].text
+
         PubInfo = ET.Element('PubInfo')
         PublicSentimentInfoNum = ET.SubElement(PubInfo, 'PublicSentimentInfoNum')
         PublicSentimentInfoNum.text = PublicSentimentInfoNum_text
         PublicSentimentInfoNum = ET.SubElement(PubInfo, 'PublicSentimentInfoNum')
         PublicSentimentInfoNum.text = PublicSentimentInfoNum_text
-        # PlatCfgRslt = ET.SubElement(PubInfo, 'PlatCfgRslt')
-        # PlatCfgRslt.text = PlatCfgRslt_text
-        # PlatInfoArea = ET.SubElement(PubInfo, 'PlatInfoArea')
-        # PlatInfoArea.text = PlatInfoArea_text
+
         xml_str = ET.tostring(PubInfo, encoding='UTF-8', short_empty_elements=False)
         return xml_str
             
     elif (MsgType == '3'):
-        PubInfoSerialNum = list(
-            root.iter('PubInfoSerialNum'))[0].text
-        PubInfoCaseName = list(
-            root.iter('PubInfoCaseName'))[0].text
-        PubInfoCaseJudgeName = list(
-            root.iter('PubInfoCaseJudgeName'))[0].text
+        xml_str = gen_xml.parse_xml_4(xml_path)
+        return xml_str
     elif (MsgType == '4'):
         pass
     elif (MsgType == '10'):
@@ -94,11 +85,13 @@ def get_attrib_value(root,MsgType):
     elif (MsgType == '11'):
         pass
     elif (MsgType == '12'):
-        pass
+        xml_str = gen_xml.parse_xml_8(xml_path)
+        return xml_str
     elif (MsgType == '13'):
         pass
     elif (MsgType == '14'):
-        pass
+        xml_str=gen_xml.parse_xml_10(xml_path)
+        return xml_str
     elif (MsgType == '15'):
         pass
     elif (MsgType == '16'):
@@ -149,12 +142,14 @@ def prettyXml(element, indent, newline, level=0):
 
 
 def main():
-    xml_str = parse_xml('./origin.xml')
-    root = ET.fromstring(xml_str)
-    prettyXml(root, '\t', '\n')
-    tree=ET.ElementTree(root)
-    tree.write('a.xml', encoding='UTF-8',  xml_declaration=True)
-    return ET.dump(root)
+    # xml_str = parse_xml('./xml_example/4.1.9.xml')
+    xml_str=parse_xml('./xml_jiaoe/get_4.xml')
+    # xml_str = parse_xml('./static/xml/origin.xml')
+    # root = ET.fromstring(xml_str)
+    # prettyXml(root, '\t', '\n')
+    # tree=ET.ElementTree(root)
+    # tree.write('a.xml', encoding='UTF-8',  xml_declaration=True)
+    # return ET.dump(root)
     
 if __name__ == '__main__':
     main()

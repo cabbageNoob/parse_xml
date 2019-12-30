@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Message>
+    <MessageHead DayTime="2019/12/30 10/06/51" MsgID="0-65535" MsgType="10" OperateType="" Priority="" ProtocolType="5" SendType="" />
+    <MessageContent>
+        <PubInfoStartTime></PubInfoStartTime>
+        <PubInfoEndTime></PubInfoEndTime>
+        <PubInfoStaticType>1</PubInfoStaticType>
+        <PubInfoDepartmentType>1</PubInfoDepartmentType>
+        <PubInfoDepartmentLevel>1</PubInfoDepartmentLevel>
+        <PubInfoDepProvince>0</PubInfoDepProvince>
+        <PubInfoDepCity></PubInfoDepCity>
+    </MessageContent>
+</Message>

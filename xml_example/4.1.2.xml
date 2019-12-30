@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Message>
+    <MessageHead DayTime="2019/12/30 10/06/51" MsgID="0-65535" MsgType="2" OperateType="" Priority="" ProtocolType="5" SendType="" />
+    <MessageContent>
+        <PublicSentimentInfoNum>3</PublicSentimentInfoNum>
+        <PublicSentimentIGetInfoArea>
+            <PubInfoID>3</PubInfoID>
+            <PlatCfgRslt>1</PlatCfgRslt>
+            <PlatInfoArea>1</PlatInfoArea>
+        </PublicSentimentIGetInfoArea>
+    </MessageContent>
+</Message>
