@@ -4,23 +4,28 @@
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-30 18:40:49
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-31 10:19:49
+@LastEditTime : 2019-12-31 10:49:59
 '''
 
 # -*- coding: utf-8 -*-
-import time
+import time,os
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
 import random
 import xlrd
 
+pwd_path = os.path.abspath(os.path.dirname(__file__))
+print(pwd_path)
+# xls file
+XLS_4_FILE = os.path.join(pwd_path, './xls/new4.xls')
 """
     4.1.4　司法案件舆情精准搜索服务订阅结果
 """
 
 
 def create_xml(input_xml):
-    sheet_main = xlrd.open_workbook('./xml_jiaoe/xls/new4.xls', encoding_override="utf-8").sheets()[0]
+    sheet_main = xlrd.open_workbook(
+        XLS_4_FILE, encoding_override="utf-8").sheets()[0]
     now_time = time.strftime('%Y/%m/%d %H/%M/%S', time.localtime(time.time()))
     dom = minidom.Document()
     root_node = dom.createElement('Message')

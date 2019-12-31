@@ -4,7 +4,7 @@
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-29 21:20:59
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-29 21:46:56
+@LastEditTime : 2019-12-31 11:13:08
 '''
 import requests
 import json, sys
@@ -33,5 +33,9 @@ if __name__ == '__main__':
     # main()
     # url = "http://" + "127.0.0.1" + ":8001/parse_xml_api"
     # files = {"file": open("D:\\uploads\\origin.xml", "rb")}
+    # # downloading with requests
+    # r=requests.get(url)
+    # with open('test.xml', 'wb') as code:
+    #     code.write(r.content)
     # print(http_post(url,files))
     print(main())

@@ -1,15 +1,27 @@
+'''
+@Descripttion: 
+@version: 
+@Author: cjh (492795090@qq.com)
+@Date: 2019-12-31 09:16:22
+@LastEditors  : cjh (492795090@qq.com)
+@LastEditTime : 2019-12-31 10:50:37
+'''
 # -*- coding: utf-8 -*-
-import time
+import time,os
 from xml.dom import minidom
 import xlrd
 
+pwd_path = os.path.abspath(os.path.dirname(__file__))
+# xls file
+XLS_15_FILE = os.path.join(pwd_path, './xls/new15.xls')
 """
     4.1.15　司法舆情简报推送请求
 """
 
 
 def create_xml():
-    sheet_main = xlrd.open_workbook('./xml_jiaoe/xls/new15.xls', encoding_override="utf-8").sheets()[0]
+    sheet_main = xlrd.open_workbook(
+        XLS_15_FILE, encoding_override="utf-8").sheets()[0]
     now_time = time.strftime('%Y/%m/%d %H/%M/%S', time.localtime(time.time()))
     dom = minidom.Document()
     root_node = dom.createElement('Message')

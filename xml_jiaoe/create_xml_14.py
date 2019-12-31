@@ -1,20 +1,25 @@
 # -*- coding: utf-8 -*-
-import time
+import time,os
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
 import random
 import xlrd
 
+pwd_path = os.path.abspath(os.path.dirname(__file__))
+# xls file
+XLS_14_FILE = os.path.join(pwd_path, './xls/new14.xls')
 """
     4.1.14 司法舆情话题事件关联信息应答
 """
 
 
 def create_xml(input_xml):
-    sheet_main = xlrd.open_workbook('./xml_jiaoe/xls/new14.xls', encoding_override="utf-8").sheets()[0]
-    sheet_TopicCorrelation = xlrd.open_workbook('./xml_jiaoe/xls/new14.xls', encoding_override="utf-8").sheets()[1]
+    sheet_main = xlrd.open_workbook(
+        XLS_14_FILE, encoding_override="utf-8").sheets()[0]
+    sheet_TopicCorrelation = xlrd.open_workbook(
+        XLS_14_FILE, encoding_override="utf-8").sheets()[1]
     sheet_TopicEventID = xlrd.open_workbook(
-        './xml_jiaoe/xls/new14.xls', encoding_override="utf-8").sheets()[2]
+        XLS_14_FILE, encoding_override="utf-8").sheets()[2]
 
     tree = ET.parse(input_xml)
     root = tree.getroot()

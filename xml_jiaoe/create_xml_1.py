@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-import time
+import time,os
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
 
 import xlrd
+
+pwd_path = os.path.abspath(os.path.dirname(__file__))
+# xls file
+XLS_1_FILE = os.path.join(pwd_path, './xls/new1.xls')
 
 """
     4.1.1　实时舆情事件信息通知
@@ -11,15 +15,16 @@ import xlrd
 
 
 def create_xml():
-    sheet_main = xlrd.open_workbook('./xml_jiaoe/xls/new1.xls',encoding_override="utf-8").sheets()[0]
+    sheet_main = xlrd.open_workbook(
+        XLS_1_FILE, encoding_override="utf-8").sheets()[0]
     sheet_PublicSentimentInfo = xlrd.open_workbook(
-        './xml_jiaoe/xls/new1.xls', encoding_override="utf-8").sheets()[1]
+        XLS_1_FILE, encoding_override="utf-8").sheets()[1]
     sheet_PubInfoFile = xlrd.open_workbook(
-        './xml_jiaoe/xls/new1.xls', encoding_override="utf-8").sheets()[2]
+        XLS_1_FILE, encoding_override="utf-8").sheets()[2]
     sheet_PubInfoDepartment = xlrd.open_workbook(
-        './xml_jiaoe/xls/new1.xls', encoding_override="utf-8").sheets()[3]
+        XLS_1_FILE, encoding_override="utf-8").sheets()[3]
     sheet_PubInfoDepartmentWork = xlrd.open_workbook(
-        './xml_jiaoe/xls/new1.xls', encoding_override="utf-8").sheets()[4]
+        XLS_1_FILE, encoding_override="utf-8").sheets()[4]
     number = sheet_main.nrows - 1
     now_time = time.strftime('%Y/%m/%d %H/%M/%S', time.localtime(time.time()))
     dom = minidom.Document()
