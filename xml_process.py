@@ -5,11 +5,12 @@
 @Author: 
 @Date: 2019-12-27 11:11:48
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-30 21:31:34
+@LastEditTime : 2019-12-31 10:22:41
 '''
 import os,re
+import requests
 import xml.etree.ElementTree as ET
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
 import gen_xml
@@ -49,7 +50,11 @@ def parse_xml(xml_path):
     file_name = xml_path.split('\\')[-1]
     file_path = os.path.join(app.config['GENERATE_XML'], 'gen_'+file_name)
     tree.write(file_path,encoding='UTF-8',  xml_declaration=True)
-    ET.dump(root)
+    # ET.dump(root)
+    # downloading with requests
+    # r=requests.get(file_path)
+    # with open(file_name, 'wb') as code:
+    #     code.write(r.content)
     xml_str=ET.tostring(root, encoding='UTF-8', short_empty_elements=False)
     return xml_str
 
@@ -61,7 +66,9 @@ def get_attrib_value(root,MsgType,xml_path):
     @return: 
     '''    
     if (MsgType == '1'):
-        pass
+        xml_str = gen_xml.parse_xml_1()
+        return xml_str
+        
     elif (MsgType == '2'):
         PublicSentimentInfoNum_text = list(
             root.iter('PublicSentimentInfoNum'))[0].text
@@ -75,43 +82,61 @@ def get_attrib_value(root,MsgType,xml_path):
         xml_str = ET.tostring(PubInfo, encoding='UTF-8', short_empty_elements=False)
         xml_str = str(xml_str, 'utf8')
         return xml_str
-            
+
     elif (MsgType == '3'):
         xml_str = gen_xml.parse_xml_4(xml_path)
         return xml_str
+
     elif (MsgType == '4'):
         pass
+
     elif (MsgType == '10'):
         pass
+
     elif (MsgType == '11'):
         pass
+    
     elif (MsgType == '12'):
         xml_str = gen_xml.parse_xml_8(xml_path)
         xml_str = str(xml_str, 'utf8')
         return xml_str
+
     elif (MsgType == '13'):
         pass
+
     elif (MsgType == '14'):
         xml_str = gen_xml.parse_xml_10(xml_path)
         xml_str = str(xml_str, 'utf8')
         return xml_str
+
     elif (MsgType == '15'):
         pass
+    
     elif (MsgType == '16'):
-        pass
+        xml_str = gen_xml.parse_xml_12(xml_path)
+        return xml_str
+
     elif (MsgType == '17'):
         pass
+
     elif (MsgType == '18'):
-        pass
+        xml_str = gen_xml.parse_xml_14(xml_path)
+        return xml_str
+
     elif (MsgType == '19'):
         pass
+
     elif (MsgType == '20'):
-        pass
+        xml_str = gen_xml.parse_xml_15()
+        return xml_str
+        
     elif (MsgType == '21'):
-        PlatCfgRslt = list(
-            root.iter('PlatCfgRslt'))[0].text
-        PlatInfoArea = list(
-            root.iter('PlatInfoArea'))[0].text
+        pass
+
+        # PlatCfgRslt = list(
+        #     root.iter('PlatCfgRslt'))[0].text
+        # PlatInfoArea = list(
+        #     root.iter('PlatInfoArea'))[0].text
 
 
 

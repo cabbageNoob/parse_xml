@@ -4,14 +4,20 @@
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-30 13:43:09
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-30 19:38:28
+@LastEditTime : 2019-12-31 10:16:44
 '''
 import os
 import xml.etree.ElementTree as ET
-from xml_jiaoe import parse_xml_4_str
-def parse_xml_4(xml_path):
-    xml_str = parse_xml_4_str.create_xml(xml_path)
+from xml_jiaoe import create_xml_1, create_xml_4, create_xml_12, create_xml_14, create_xml_15
+
+def parse_xml_1():
+    xml_str = create_xml_1.create_xml()
     return xml_str
+
+def parse_xml_4(xml_path):
+    xml_str = create_xml_4.create_xml(xml_path)
+    return xml_str
+    
 def parse_xml_8(xml_path):
     tree = ET.parse(xml_path)
     root=tree.getroot()
@@ -122,7 +128,18 @@ def parse_xml_10(xml_path):
     xml_str = ET.tostring(Message, encoding='UTF-8',
                           short_empty_elements=False)
     return xml_str
-    
+
+def parse_xml_12(xml_path):
+    xml_str = create_xml_12.create_xml(xml_path)
+    return xml_str
+
+def parse_xml_14(xml_path):
+    xml_str = create_xml_14.create_xml(xml_path)
+    return xml_str
+
+def parse_xml_15():
+    xml_str = create_xml_15.create_xml()
+    return xml_str
         
         
 

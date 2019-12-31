@@ -4,7 +4,7 @@
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-30 18:40:49
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-30 19:42:45
+@LastEditTime : 2019-12-31 10:19:49
 '''
 
 # -*- coding: utf-8 -*-
@@ -89,7 +89,7 @@ def create_xml(input_xml):
     key_text = dom.createTextNode(str(PlatInfoArea))
     key_node.appendChild(key_text)
 
-    xml_str=dom.toxml()
+    xml_str = dom.toxml()
     return xml_str
     
     # try:

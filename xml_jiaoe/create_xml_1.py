@@ -236,14 +236,16 @@ def create_xml():
                                 key_text = dom.createTextNode(sheet_PubInfoDepartmentWork.row_values(k)[2])
                                 key_node.appendChild(key_text)
 
-    try:
-        with open('./xml_jiaoe/xml/4.1.1实时舆情事件信息通知.xml', 'w', encoding='UTF-8') as fh:
-            dom.writexml(fh, indent='', addindent='\t', newl='\n', encoding='UTF-8')
-            print('写实时舆情事件信息通知文件完毕!')
-    except Exception as err:
-        print('错误信息：{0}'.format(err))
+    xml_str=dom.toxml()
+    return xml_str
+    # try:
+    #     with open('./xml_jiaoe/xml/4.1.1实时舆情事件信息通知.xml', 'w', encoding='UTF-8') as fh:
+    #         dom.writexml(fh, indent='', addindent='\t', newl='\n', encoding='UTF-8')
+    #         print('写实时舆情事件信息通知文件完毕!')
+    # except Exception as err:
+    #     print('错误信息：{0}'.format(err))
 
-
-create_xml()
+if __name__=='__main__':
+    create_xml()
 
 

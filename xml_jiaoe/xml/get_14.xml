@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+	<MessageHead DayTime="2019/12/30 23/17/40" MsgID="0-65535" MsgType="18" OperateType="" Priority="" ProtocolType="5" SendType=""/>
+	<MessageContent>
+		<PubInfoTopicID>5</PubInfoTopicID>
+	</MessageContent>
+</Message>
