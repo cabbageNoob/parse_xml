@@ -37,7 +37,7 @@ def create_xml(input_xml):
     dom.appendChild(root_node)
     head_node = dom.createElement('MessageHead')
     head_node.setAttribute("ProtocolType", '3')
-    head_node.setAttribute("MsgType", '14')
+    head_node.setAttribute("MsgType", '17')
     head_node.setAttribute("MsgID", "0-65535")
     head_node.setAttribute("OperateType", '')
     head_node.setAttribute("SendType", '')

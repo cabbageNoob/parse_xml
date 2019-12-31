@@ -4,7 +4,7 @@
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-31 09:16:22
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-31 10:50:37
+@LastEditTime : 2019-12-31 12:14:22
 '''
 # -*- coding: utf-8 -*-
 import time,os
@@ -28,7 +28,7 @@ def create_xml():
     dom.appendChild(root_node)
     head_node = dom.createElement('MessageHead')
     head_node.setAttribute("ProtocolType", '3')
-    head_node.setAttribute("MsgType", '15')
+    head_node.setAttribute("MsgType", '20')
     head_node.setAttribute("MsgID", "0-65535")
     head_node.setAttribute("OperateType", '')
     head_node.setAttribute("SendType", '')

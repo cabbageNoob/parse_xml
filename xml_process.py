@@ -5,7 +5,7 @@
 @Author: 
 @Date: 2019-12-27 11:11:48
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-31 10:22:41
+@LastEditTime : 2019-12-31 12:17:18
 '''
 import os,re
 import requests
@@ -91,7 +91,8 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
 
     elif (MsgType == '10'):
-        pass
+        xml_str = gen_xml.parse_xml_6(xml_path)
+        return xml_str
 
     elif (MsgType == '11'):
         pass

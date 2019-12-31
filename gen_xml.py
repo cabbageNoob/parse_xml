@@ -4,11 +4,11 @@
 @Author: cjh (492795090@qq.com)
 @Date: 2019-12-30 13:43:09
 @LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-31 10:16:44
+@LastEditTime : 2019-12-31 12:09:54
 '''
 import os
 import xml.etree.ElementTree as ET
-from xml_jiaoe import create_xml_1, create_xml_4, create_xml_12, create_xml_14, create_xml_15
+from xml_jiaoe import create_xml_1, create_xml_4, create_xml_6,create_xml_12, create_xml_14, create_xml_15
 
 def parse_xml_1():
     xml_str = create_xml_1.create_xml()
@@ -16,6 +16,10 @@ def parse_xml_1():
 
 def parse_xml_4(xml_path):
     xml_str = create_xml_4.create_xml(xml_path)
+    return xml_str
+
+def parse_xml_6(xml_path):
+    xml_str = create_xml_6.create_xml(xml_path)
     return xml_str
     
 def parse_xml_8(xml_path):
