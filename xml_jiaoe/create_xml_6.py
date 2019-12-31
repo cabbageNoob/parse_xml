@@ -1,4 +1,13 @@
+'''
+@Descripttion: 
+@version: 
+@Author: nlpir
+@Date: 2019-12-31 12:05:09
+@LastEditors  : nlpir
+@LastEditTime : 2019-12-31 12:36:10
+'''
 # -*- coding: utf-8 -*-
+
 import time,os
 from xml.dom import minidom
 import xml.etree.ElementTree as ET
@@ -617,4 +626,4 @@ def create_xml(input_xml):
     #     print('错误信息：{0}'.format(err))
 
 if __name__=='__main__':
-    create_xml()
+    create_xml('./xml_jiaoe/xml/get_6.xml')

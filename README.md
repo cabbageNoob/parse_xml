@@ -1,18 +1,20 @@
 <!--
  * @Descripttion: 
  * @version: 
- * @Author: cjh (492795090@qq.com)
+ * @Author: nlpir
  * @Date: 2019-12-29 21:48:21
- * @LastEditors  : cjh (492795090@qq.com)
- * @LastEditTime : 2019-12-31 11:18:02
+ * @LastEditors  : nlpir
+ * @LastEditTime : 2019-12-31 12:40:15
  -->
+
 ## python 读取xml文件并封装成服务
 
 ### 启动服务
 运行manager.py文件
 
 ### 调用服务方式
-- 方式一：直接在浏览器打开http://127.0.0.1:8001/parse_xml_api，按要求选择xml文件再上传
+- 方式一：直接在浏览器打开[网址](http://127.0.0.1:8001/parse_xml_api)，
+按要求选择xml文件再上传
 
 - 方式二：打开一个cmd窗口，输入如下类似命令
 ```

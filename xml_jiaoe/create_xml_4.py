@@ -1,11 +1,12 @@
 '''
 @Descripttion: 
 @version: 
-@Author: cjh (492795090@qq.com)
+@Author: nlpir
 @Date: 2019-12-30 18:40:49
-@LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-31 10:49:59
+@LastEditors: nlpir
+@LastEditTime: 2019-12-31 12:35:59
 '''
+
 
 # -*- coding: utf-8 -*-
 import time,os

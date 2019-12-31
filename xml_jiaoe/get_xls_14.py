@@ -1,4 +1,13 @@
+'''
+@Descripttion: 
+@version: 
+@Author: nlpir
+@Date: 2019-12-31 09:16:24
+@LastEditors: nlpir
+@LastEditTime: 2019-12-31 12:37:06
+'''
 # -*- coding:utf-8 -*-
+
 import xlrd
 import pandas as pd
 import random

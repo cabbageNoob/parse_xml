@@ -1,4 +1,13 @@
+'''
+@Descripttion: 
+@version: 
+@Author: nlpir
+@Date: 2019-12-31 09:16:24
+@LastEditors  : nlpir
+@LastEditTime : 2019-12-31 12:36:29
+'''
 # -*- coding: utf-8 -*-
+
 import time,os
 from xml.dom import minidom
 import xml.etree.ElementTree as ET

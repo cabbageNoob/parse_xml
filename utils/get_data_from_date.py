@@ -1,11 +1,12 @@
 '''
 @Descripttion: 
 @version: 
-@Author: cjh (492795090@qq.com)
+@Author: nlpir
 @Date: 2019-12-30 14:14:29
-@LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-30 14:18:08
+@LastEditors  : nlpir
+@LastEditTime : 2019-12-31 12:38:27
 '''
+
 import xlrd
 import pandas as pd
 import random

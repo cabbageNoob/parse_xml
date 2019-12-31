@@ -1,12 +1,13 @@
-# -*- coding: utf-8 -*-
 '''
 @Descripttion: 
 @version: 
-@Author: 
+@Author: nlpir
 @Date: 2019-12-27 11:11:48
-@LastEditors  : cjh (492795090@qq.com)
-@LastEditTime : 2019-12-31 12:17:18
+@LastEditors  : nlpir
+@LastEditTime : 2019-12-31 12:37:39
 '''
+# -*- coding: utf-8 -*-
+
 import os,re
 import requests
 import xml.etree.ElementTree as ET
