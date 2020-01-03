@@ -4,7 +4,7 @@
 @Author: nlpir
 @Date: 2019-12-29 20:35:10
 @LastEditors  : nlpir
-@LastEditTime : 2020-01-03 15:52:58
+@LastEditTime : 2020-01-03 16:18:27
 '''
 import os, json
 from flask import Flask, flash, render_template, redirect, request, url_for
@@ -59,7 +59,11 @@ def parse_json():
     if request.method == 'POST':
         time = request.form['time']
         file_name = file_name + time + '.json'
-        result = util.readjson(file_name)
+        try:
+            result = util.readjson(file_name)
+        except FileNotFoundError as e:
+            print('file not found',e)
+            return "file not found"
         return json.dumps(result)
 
 
