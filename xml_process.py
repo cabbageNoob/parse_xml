@@ -4,7 +4,7 @@
 @Author: nlpir
 @Date: 2019-12-27 11:11:48
 @LastEditors  : nlpir
-@LastEditTime : 2019-12-31 12:37:39
+@LastEditTime : 2020-01-03 12:33:02
 '''
 # -*- coding: utf-8 -*-
 
@@ -65,12 +65,15 @@ def get_attrib_value(root,MsgType,xml_path):
     @Descripttion: 根据MsgType获取xml信息
     @param MsgType
     @return: 
-    '''    
+    '''  
+    
     if (MsgType == '1'):
+        '''实时舆情事件信息通知'''
         xml_str = gen_xml.parse_xml_1()
         return xml_str
-        
+    
     elif (MsgType == '2'):
+        '''实时舆情事件信息通知'''
         PublicSentimentInfoNum_text = list(
             root.iter('PublicSentimentInfoNum'))[0].text
 
@@ -85,6 +88,7 @@ def get_attrib_value(root,MsgType,xml_path):
         return xml_str
 
     elif (MsgType == '3'):
+        '''司法案件舆情精准搜索服务订阅请求'''
         xml_str = gen_xml.parse_xml_4(xml_path)
         return xml_str
 
@@ -92,6 +96,7 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
 
     elif (MsgType == '10'):
+        '''司法舆情业务监测信息请求'''
         xml_str = gen_xml.parse_xml_6(xml_path)
         return xml_str
 
@@ -99,6 +104,7 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
     
     elif (MsgType == '12'):
+        '''司法舆情热点话题监测信息请求'''
         xml_str = gen_xml.parse_xml_8(xml_path)
         xml_str = str(xml_str, 'utf8')
         return xml_str
@@ -107,6 +113,7 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
 
     elif (MsgType == '14'):
+        '''司法舆情话题搜索请求'''
         xml_str = gen_xml.parse_xml_10(xml_path)
         xml_str = str(xml_str, 'utf8')
         return xml_str
@@ -115,6 +122,7 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
     
     elif (MsgType == '16'):
+        '''司法舆情话题传播路径信息请求'''
         xml_str = gen_xml.parse_xml_12(xml_path)
         return xml_str
 
@@ -122,6 +130,7 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
 
     elif (MsgType == '18'):
+        '''司法舆情话题事件关联信息请求'''
         xml_str = gen_xml.parse_xml_14(xml_path)
         return xml_str
 
@@ -129,6 +138,7 @@ def get_attrib_value(root,MsgType,xml_path):
         pass
 
     elif (MsgType == '20'):
+        '''司法舆情简报推送请求'''
         xml_str = gen_xml.parse_xml_15()
         return xml_str
         
